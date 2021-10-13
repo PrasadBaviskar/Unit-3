@@ -1,0 +1,65 @@
+body{
+    background-color: #1c1b1b;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+input{
+    height: 25px;
+}     
+
+input[type="submit"]{
+    height: 30px;
+}
+
+.input_row{
+    text-align: center;
+    display: grid;
+    grid-template-columns:5% 65% 15%;
+    gap: 2%;
+    margin: auto;
+    background-color: black;
+    padding: 1%;
+}
+
+.imdb{
+    background-color: #f5c518;
+    padding-top: 10%;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+#container{
+    width: 1024px;
+    margin: auto;
+}
+
+#details{
+    margin-top: 10px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 35% 63%;
+    gap: 10px;
+}
+
+#details>div:nth-child(2){
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.title{
+    font-size: 33px;
+    font-weight: 900;
+    text-shadow: 2px 1px 2px #f5c518;
+}
+
+.notfound{
+    margin: auto;
+    margin-left: 100px;
+}
