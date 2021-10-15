@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://i.imgur.com/U4Op2KW.jpg" type="image/icon type">
+    <link rel="stylesheet" href="index.css">
+    <title> Disney + Hotstar </title>
+   
+</head>
+<body>
+    
+    <div id="container">
+        <div class="input_row">
+            <div class="imdb"> <img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt=""> </div>
+            <input oninput="debounce(main,1000)" type="search" id="movie_name" name="" placeholder="  Search Movie ">
+            <input type="submit" onclick="GetMovie()" class="getdetails_btn" value="Get Details">
+        </div>
+        
+        <div id="movie"> </div>
+
+        <div id="movie_details">  </div>
+        
+        <h2> Trending Movies </h2>
+
+        <div id="trending_movies"> </div>
+    </div>
+</body>
+</html>
+<script src="index.js"> </script>
