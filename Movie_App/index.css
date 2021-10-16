@@ -199,3 +199,7 @@ html { scroll-behavior: smooth; }
     padding: 6px;
     border-radius: 3px 15px 15px 3px;
 }
+
+a{
+    text-decoration: none;
+}
