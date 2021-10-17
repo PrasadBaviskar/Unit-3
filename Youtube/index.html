@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="icon" href="https://www.cordcuttersnews.com/wp-content/uploads/2019/10/YouTube-Logo-Large-600x375.png" type="image/icon type">
+    <title> Youtube </title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    
+    <div id="navbar">
+      <div class="bar"> 
+        <i class="fa fa-bars big" aria-hidden="true"></i> 
+      </div>
+      
+      <div class="yt_logo_div">
+        <img class="yt_logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png" alt="" srcset="">
+      </div>
+
+      <div class="lm">
+        <input type="text" id="query" placeholder="Search for a Video" />
+        
+        <button onclick="Search_Video()" class="srch_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
+
+      
+    </div>
+
+      <div id="container">
+        <div>
+          <i class="fa fa-home" aria-hidden="true"></i>  <p> Home </p>
+          <i class="far fa-compass"></i> <p> Explore </p>
+          <i class="fab fa-youtube"></i> <p> Subscription </p>
+          <i class="far fa-play-circle"></i> <p> Library </p>
+        </div>
+
+
+        <div>
+            <div id="videos"> </div>
+
+            <h3 class="category"> Popular Videos </h3>
+
+            <div id="popular_videos"> </div>
+            </div>
+      </div>   
+
+    </div>
+  </body>
+</html>
+
+ <script src="index.js"> </script>
+
+
