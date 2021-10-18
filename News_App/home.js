@@ -9,7 +9,7 @@ async function All_News(){
     data = data.articles;
     console.log(data)
 
-    data.forEach((news=>{
+    data.forEach((news)=>{
         console.log(news)
         let title = document.createElement("p");
         title.innerText = news.title;
@@ -32,7 +32,7 @@ async function All_News(){
         news_box.append(title, desc, img)
 
         container.append(news_box)
-    }))
+    })
 }
 
 All_News()
