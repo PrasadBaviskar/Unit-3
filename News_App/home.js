@@ -26,7 +26,7 @@ async function All_News(){
         let news_box = document.createElement("div")
 
         news_box.onclick = function(){
-            details(news.id)
+            details(news)
         }
 
         news_box.append(title, desc, img)
@@ -39,10 +39,7 @@ All_News()
 
 // https://newsapi.org/v2/top-headlines/sources?category=businessapiKey=API_KEY
 
-async function details(id){
-    let res = fetch(`https://newsapi.org/v2/top-headlines/sources?id=${id}Key=d6c0274eac024061a5186b86884dfc6b`)
-
-    // let data = res.json()
-
-    console.log(res)
+async function details(news){
+    localStorage.setItem("news",JSON.stringify(news))
+    location.href = "news.html"
 }
