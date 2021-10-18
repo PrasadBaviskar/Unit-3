@@ -5,9 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serach Results</title>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            width: 850px;
+            margin: auto;
+        }
+        #container>div{
+            border:1px solid black;
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            gap: 5%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .news_img{
+            width: 100%;
+        }
+
+        .title{
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .desc{
+            font-size: 12px;
+        }
+
+        .ib{
+            display: inline-block;
+            margin:0px;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1 class="ib"> Search Results  <p class="ib" id="length">  </p> </h1>
+    <hr>
+    <div id="container"></div>
 </body>
 </html>
 <script src="search.js"></script>

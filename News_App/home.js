@@ -39,7 +39,7 @@ All_News()
 
 // https://newsapi.org/v2/top-headlines/sources?category=businessapiKey=API_KEY
 
-async function details(news){
+function details(news){
     localStorage.setItem("news",JSON.stringify(news))
     location.href = "news.html"
 }
