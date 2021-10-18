@@ -43,3 +43,13 @@ async function details(news){
     localStorage.setItem("news",JSON.stringify(news))
     location.href = "news.html"
 }
+
+function Search(){
+    let keywords = document.getElementById("search").value;
+
+    console.log(keywords)
+    
+    localStorage.setItem("search",JSON.stringify(keywords))
+
+    location.href = "search.html"
+}

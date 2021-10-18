@@ -33,10 +33,32 @@
         .desc{
             font-size: 12px;
         }
+        #nav{
+            display: flex;
+            /* flex-direction: row; */
+        }
+        #nav>input[type="text"]{
+            margin:10px;
+            height:30px;
+            width: 400px;
+            margin-top: 1.5%;
+        }
+
+        #nav>input[type="submit"]{
+            margin:10px;
+            height:35px;
+            margin-top: 1.5%;
+        }
     </style>
 </head>
 <body>
-    <h1> News App</h1>
+    
+    <div id="nav">
+        <h1> News App</h1>
+        <input type="text" id="search" placeholder=" Search News">
+        <input type="submit" value="Search" onclick="Search()">
+    </div>
+    
     <hr>
     <div id="container">
 
