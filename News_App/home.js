@@ -1,7 +1,7 @@
 // d6c0274eac024061a5186b86884dfc6b
 let container = document.getElementById("container");
 async function All_News(){
-   let res = await fetch(`https://newsapi.org/v2/everything?q=Apple&from=2021-10-18&sortBy=popularity&apiKey=d6c0274eac024061a5186b86884dfc6b`)
+   let res = await fetch(`https://newsapi.org/v2/everything?q=world&from=2021-10-18&sortBy=popularity&apiKey=d6c0274eac024061a5186b86884dfc6b`)
 
    let data = await res.json()
    
@@ -53,3 +53,5 @@ function Search(){
 
     location.href = "search.html"
 }
+
+// https://newsapi.org/v2/top-headlines\apiKey=d6c0274eac024061a5186b86884dfc6b

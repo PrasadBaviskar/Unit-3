@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serach Results</title>
     <style>
+        body{
+            background-color: #CFD8DC;
+        }
         #container{
             display: flex;
             flex-direction: column;
@@ -13,12 +16,17 @@
             margin: auto;
         }
         #container>div{
-            border:1px solid black;
+            border-bottom:1px solid cornflowerblue;
             display: grid;
             grid-template-columns: repeat(3, 30%);
             gap: 5%;
             padding: 10px;
-            margin: 10px;
+            margin: 7px;
+            border-radius: 10px;
+        }
+
+        #container>div:hover{
+            box-shadow: 2px 2px 2px #78909C;
         }
 
         .news_img{
@@ -38,10 +46,15 @@
             display: inline-block;
             margin:0px;
         }
+
+        .back{
+            margin-left: 70%;
+        }
     </style>
 </head>
 <body>
     <h1 class="ib"> Search Results  <p class="ib" id="length">  </p> </h1>
+    <a class="back" href="home.html"> Homepage </a>
     <hr>
     <div id="container"></div>
 </body>
