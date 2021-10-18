@@ -77,7 +77,7 @@
 
 #container>div{
     /* border:1px solid black; */
-    height: 500px;
+    height: 570px;
     overflow: scroll;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -90,6 +90,7 @@
 
 #container>div:nth-child(2){
     background-color: #F5F5F5;
+
 }
 
 ::-webkit-scrollbar {
