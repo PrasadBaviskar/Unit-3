@@ -1,0 +1,157 @@
+.bar{
+    padding-top: 0.7%;
+}
+
+.yt_logo{
+    width: 80px;
+    margin-top: 10%;
+    margin-left: 35px;
+}
+.yt_logo_div{
+    width: auto;
+}
+#navbar{
+    display: flex;
+    margin-left: 2.3%;
+    /* justify-content: start; */
+}
+
+.big{
+    font-size: 24px;
+}
+
+#navbar > div{
+    margin:10px;
+}
+
+#query{
+    height: 30px;
+    width: 500px;
+    margin-top: -5%;
+}
+
+.srch_btn{
+    height: 36px;
+    border:1px solid gray;
+    /* margin-top: -15%; */
+    margin-left: -0.8%;
+    border-left: none;
+    width: 50px;
+    background-color: #f8f8f8;
+}
+
+#videos{
+    width: 90%;
+    margin-top:20px;
+    display: grid;
+    grid-template-columns:repeat(3, 33%);
+    gap:2%;
+    margin: auto;
+}
+
+#popular_videos{
+  width: 90%;
+  display: grid;
+  grid-template-columns:repeat(3, 33%);
+  gap: 2%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+
+.category{
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+
+#container{
+    display: grid;
+    grid-template-columns: 8% 90%;
+    /* gap: 1%; */
+}
+
+#container>div>p{
+    margin-top: 0px;
+
+}
+
+#container>div{
+    /* border:1px solid black; */
+    height: 500px;
+    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 15px;
+}
+
+#container>div:nth-child(1){
+    text-align: center;
+}
+
+#container>div:nth-child(2){
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;     
+}
+
+::-webkit-scrollbar-thumb {
+    background: whitesmoke;
+}
+
+html { scroll-behavior: smooth; } 
+
+.lm{
+    margin-left: 15%;
+}
+
+.login_btn{
+    height: 35px;
+    width: 100px;
+    margin-left: 50%;
+}
+
+#user_form{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+
+#sign_up_form,#sign_in_form{
+    display: flex;
+    flex-direction: column;
+    width: 60%; 
+    margin: auto;
+    padding: 10px;
+}
+
+#sign_up_form>input, #sign_in_form>input{
+    margin: 5px;
+    height: 30px;
+    /* border-radius: 5px; */
+    /* background-color: #0c111b; */
+    /* color: snow; */
+}
+
+#user_form>div:nth-child(1){
+    border-right:1px solid rgba(75, 74, 74, 0.582);
+}
+
+.text_center{
+    text-align: center;
+}
+#u{
+    font-weight: 800;
+    margin-top: -20%;
+}
+
+/* #block{
+    margin-left:8%;
+    width:99%;
+
+} */

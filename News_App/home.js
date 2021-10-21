@@ -1,10 +1,9 @@
 // d6c0274eac024061a5186b86884dfc6b
 let container = document.getElementById("container");
 async function All_News(){
-   let res = await fetch(`https://newsapi.org/v2/everything?q=world&from=2021-10-18&sortBy=popularity&apiKey=d6c0274eac024061a5186b86884dfc6b`)
+   let res = await fetch(`http://newsapi.org/v2/everything?q=world&from=2021-10-18&sortBy=popularity&apiKey=d6c0274eac024061a5186b86884dfc6b`)
 
    let data = await res.json()
-   
 
     data = data.articles;
     console.log(data)

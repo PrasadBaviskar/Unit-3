@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="YT.css">
+  </head>
+  <body>
+    
+    <div id="navbar">
+      <div class="bar"> 
+        <i class="fa fa-bars big" aria-hidden="true"></i> 
+      </div>
+      
+      <div class="yt_logo_div">
+        <img class="yt_logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png" alt="" srcset="">
+      </div>
+
+      <div class="lm">
+        <input type="text" id="query" placeholder="Search for a Video" />
+        
+        <button onclick="Search_Video()" class="srch_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
+
+      <div>
+          <button class="login_btn" onclick="signin_page()" id="sbtn"> Login </button>
+          <p id="u">  </p>
+      </div>
+
+      
+    </div>
+
+      <div id="container">
+        <div>
+          <i class="fa fa-home" aria-hidden="true"></i>  <p> Home </p>
+          <i class="far fa-compass"></i> <p> Explore </p>
+          <i class="fab fa-youtube"></i> <p> Subscription </p>
+          <i class="far fa-play-circle"></i> <p> Library </p>
+        </div>
+
+        <div id="user_form"> 
+          <div> 
+              <h3 class="text_center"> Sign In </h3>
+              <form action="" onsubmit="Sigh_in(event)" id="sign_in_form">
+                  <input type="text"  id="unm" placeholder=" Enter Name ">
+
+                  <input type="password"  id="pwd" placeholder=" Enter Password ">
+
+                  <input type="submit" value="Sign In">
+                  
+              </form>
+          </div>
+          
+          <div>  
+              <h3 class="text_center"> Registration </h3>
+              <form action="" onsubmit="Register(event)" id="sign_up_form">
+                  <span id="msg_success"> </span>
+
+                  <input type="text"  id="uname" placeholder=" Enter Name ">
+
+                  <input type="email"  id="email" placeholder=" Enter Email ">
+      
+                  <input type="password"  id="password" placeholder=" Enter Password ">
+      
+                  <input type="text"  id="username" placeholder=" Enter Username ">
+      
+                  <input type="number"  id="mobile" placeholder=" Enter Mobile Number ">
+      
+                  <input type="text"  id="description" placeholder=" Description ">
+      
+                  <input type="submit" value="Register">
+              </form>
+          </div>
+      </div>
+
+        <div id="block">
+            <div id="videos"> </div>
+
+            <h3 class="category"> Popular Videos </h3>
+
+            <div id="popular_videos"> </div>
+            </div>
+      </div>   
+
+    </div>
+  </body>
+</html>
+
+ <script src="YT.js"> </script>
+
+
