@@ -135,6 +135,7 @@
                 "Content-Type": "application/json",
             },
         });
+        location.reload()
         }
         catch(err){
             console.log(err)
@@ -152,6 +153,7 @@
                 'Content-Type': 'applications/json'
             },
         });
+        location.reload()
     }
 
     async function updateProduct(){
@@ -168,7 +170,7 @@
                 'Content-Type':"application/json",
             }
         })
-        
+        location.reload()
 
         console.log(data)
     }
