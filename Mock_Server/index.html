@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #B2DFDB;
+    }
+    .cont{
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        margin: auto;
+        width: 100%;
+    }
+
+    .cont>div{
+        margin: auto;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 10px;
+        border: 1px solid slateblue;
+        background-color: #26A69A;
+        text-align: center;
+        border-radius: 10px;
+        height: 300px;
+    }
+    .cont>div>button{
+        margin-bottom: 10%;
+        width: 97%;
+        height: 30px;
+        margin: auto;
+        margin-top: 0px;
+    }
+
+    .cont>div>input{
+        margin: 5px;
+        height: 20px;
+        padding: 5px;
+    }
+    
+    #list>div{
+        display: flex;
+    }
+    .cont>div:nth-child(4){
+        height: 500px;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    #list>div>p{margin:6px}
+</style>
+<body>
+    <div id="sampple"></div>
+    <div class="cont">
+        <div>
+            <h1> Add Product </h1>
+            <input type="text" id="id" placeholder="ID">
+            <input type="text" id="name" placeholder="Name">
+            <input type="number" id="price" placeholder="Price">
+            <button onclick="addProduct()"> Add Product </button>
+        </div>
+        
+        <div>
+            <h1>Delete Product </h1>
+            <input type="number" id="del_id" placeholder="id">
+            <button onclick="deleteProd()"> Delete Product </button>
+        </div>
+        
+        <div>
+            <h1> Update Product </h1>
+            <input type="text" id="new_id" placeholder="Old ID">
+            <input type="text" id="new_name" placeholder="New Name">
+            <input type="number" id="new_price" placeholder="New Price">
+            <button onclick="updateProduct()"> Update Product </button>
+        </div>
+
+        <div>
+            <h1> Products </h1>
+            
+            <div id="list"> </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    async function getdata(){
+        let list = document.getElementById("list");
+       let res = await fetch(`http://localhost:5000/api/products`)
+        
+       let data = await res.json();
+        
+       data.forEach(el => {
+        let div = document.createElement("div");
+
+        let id = document.createElement("p"); 
+        id.innerText = el.id;
+
+        let name = document.createElement("p"); 
+        name.innerText = el.name;
+
+        let price = document.createElement("p"); 
+        price.innerText = el.price;
+
+        div.append(id, name, price)
+       
+        list.append(div);
+    });
+
+
+    }
+
+    getdata()
+
+    async function addProduct(){
+        try{
+            let data = {
+            id:document.getElementById("id").value,
+            name:document.getElementById("name").value,
+            price:document.getElementById("price").value,
+        };
+        document.getElementById("sampple").innerText = data;
+        console.log(data);
+
+        let res = await fetch(`http://localhost:5000/api/products`,{
+            method: 'POST',
+            body : JSON.stringify(data),
+            headers:{
+                "Content-Type": "application/json",
+            },
+        });
+        }
+        catch(err){
+            console.log(err)
+        }
+
+        // let d = await res.json()
+        // console.log(d)
+    }
+
+    async function deleteProd(){
+        let id = document.getElementById("del_id").value;
+        let res = await fetch(`http://localhost:5000/api/products/${id}`,{
+            method: "delete",
+            headers:{
+                'Content-Type': 'applications/json'
+            },
+        });
+    }
+
+    async function updateProduct(){
+        let data = {
+            id: document.getElementById("new_id").value,
+            name: document.getElementById("new_name").value,
+            price: document.getElementById("new_price").value,
+        };
+
+        let res = await fetch(`http://localhost:5000/api/products/${data.id}`,{
+            method:'PUT',
+            body:JSON.stringify(data),
+            headers:{
+                'Content-Type':"application/json",
+            }
+        })
+        
+
+        console.log(data)
+    }
+
+</script>
