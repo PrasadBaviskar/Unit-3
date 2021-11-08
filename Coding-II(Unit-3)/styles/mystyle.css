@@ -15,3 +15,36 @@
     margin-left: 20px;
     padding: 5px;
 }
+
+.signup_box{
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.signup_box>form>div{
+    margin:5px;
+}
+
+.signin_box{
+    width: 300px;
+    margin-top: 20px;
+    margin: auto;
+}
+
+#list{
+    display: grid;
+    grid-template-columns: repeat(4,26%);
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.thumb{
+    width: 250px;
+    height: 250px;
+}
+
+.btn{
+    margin-bottom:4%;
+    
+}
