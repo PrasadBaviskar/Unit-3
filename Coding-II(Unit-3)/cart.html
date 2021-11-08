@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        img{
+            height: 80px;
+            width: 80px;
+        }
+        .row{
+            display: flex;
+        }
+
+        .row>img{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="list">
+
+    </div>
+</body>
+</html>
+
+<script>
+   let list = JSON.parse(localStorage.getItem("cart"))
+   console.log(list)
+   let cart = document.getElementById("list")
+
+   list.forEach(({photo,title})=>{
+        let div = document.createElement("div");
+        div.className = "row"
+        
+        let img = document.createElement("img");
+        img.src = photo;
+
+        let title1 = document.createElement("h3");
+        title1.innerText = title;
+
+        div.append(img, title1);
+
+        cart.append(div);
+   });
+</script>

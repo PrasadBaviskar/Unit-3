@@ -88,10 +88,10 @@ async function Menu(){
 
     data.meals.forEach(({strMealThumb,strMeal}) => {
         let div = document.createElement("div")
-
+        // console.log(strMealThumb,strMeal)
         let img = document.createElement("img")
         img.src = strMealThumb;
-        img.className = "thumb"
+        img.className = "thumb";
 
         let title = document.createElement("h3");
         title.innerText = strMeal;
@@ -114,17 +114,17 @@ async function Menu(){
 
 Menu()
 
-localStorage.setItem("cart",[])
 
 function addToCart(strMealThumb,strMeal){
-    let cart_list =JSON.parse(localStorage.getItem("cart"))
-    
+    let cart_list = JSON.parse(localStorage.getItem("cart"))
+    console.log(strMealThumb,strMeal)
+    console.log(cart_list)
     item = {
         "photo":strMealThumb,
         "title":strMeal
     }
 
-    cart_list.append(item)
+    cart_list.push(item)
 
     localStorage.setItem("cart",JSON.stringify(cart_list))
 }

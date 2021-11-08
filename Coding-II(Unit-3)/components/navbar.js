@@ -5,6 +5,7 @@ function navbar(){
         <div> <a href="menu.html"> Menu </a>  </div>
         <div> <a href="signup.html"> Sign Up </a> </div>
         <div> <a href="signin.html"> Sign In </a> </div>
+        <div> <a href="cart.html"> Cart </a> </div>
     </div>`
 }
 

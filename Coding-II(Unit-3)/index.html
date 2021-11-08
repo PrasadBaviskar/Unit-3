@@ -13,6 +13,8 @@
 </html>
 
 <script type="module">
+    localStorage.setItem("cart",JSON.stringify([]))
+
     import navbar from "./components/navbar.js"
 
     document.getElementById("navbar").innerHTML = navbar();
